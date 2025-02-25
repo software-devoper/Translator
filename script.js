@@ -9,6 +9,22 @@ let input = document.querySelector('#text');
 let mic=document.querySelector('#mic');
 let paste=document.querySelector('.paste');
 let speek=document.querySelector('#speek');
+let share=document.querySelector('#share');
+let menubar=document.querySelector('.menuBar');
+let menu=document.querySelector('.icon');
+let whatsApp=document.querySelector('#wh');
+let Speak=document.querySelector('#speak');
+let sms=document.querySelector('#sms');
+let like=document.querySelector('#like');
+like.addEventListener('click',()=>{
+    confirm("Do you like this website?");
+})
+sms.addEventListener('click',()=>{
+    window.open("sms:+918972594871", "_blank");
+})
+whatsApp.addEventListener('click',()=>{
+    window.open("https://wa.me/918972594871", "_blank");
+})
 let translateText = async () => {
      let url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=bn&dt=t&q=${encodeURIComponent(input.value)}`;
      let response = await fetch(url);
@@ -49,6 +65,18 @@ mic.addEventListener('click',()=>{
      speech.pitch = 1;    
      window.speechSynthesis.speak(speech);
  })
+ Speak.addEventListener('click',()=>{
+        if (textArea1.value.trim() === "") {
+            alert("Please enter text first!");
+            return;
+        }
+        let speech = new SpeechSynthesisUtterance(textArea1.value);
+        speech.lang = "bn-BD"; 
+        speech.volume = 1;
+        speech.rate = 1;
+        speech.pitch=1;
+        window.speechSynthesis.speak(speech);
+ })
      paste.addEventListener('click', async()=>{
           try {
                const text = await navigator.clipboard.readText();
@@ -74,3 +102,29 @@ mic.addEventListener('click',()=>{
               alert("Speech recognition failed. Try again.");
           };
      });
+
+     share.addEventListener('click', async()=>{
+          let text = textArea1.value;
+          if (!text) {
+              alert("Nothing to share!");
+              return;
+          }
+          if (navigator.share) {
+              try {
+                  await navigator.share({
+                      text: text
+                  });
+                  console.log("Shared successfully!");
+              } catch (error) {
+                  console.error("Sharing failed:", error);
+              }
+          } else {
+              alert("Sharing not supported on this device.");
+          }
+     });
+     menu.addEventListener('click',()=>{
+        menubar.style.display='block';
+     });
+     menubar.addEventListener('click',()=>{
+        menubar.style.display='none';
+     })
