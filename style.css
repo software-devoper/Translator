@@ -146,7 +146,21 @@ nav {
     font-size: 20px;
 }
 
+.menuBar {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 40%;
+    background-color:white;
+    display: none;
+}
+.icon{
+    display: none;
+}
 @media screen and (max-width: 650px) {
+    .icon{
+        display: block;
+    }
     body {
         height: 112vh;
         width: 102vw;
@@ -177,4 +191,178 @@ nav {
     .meaning {
         width: 37%;
     }
+
+    .menuBar {
+        display: none;
+        height: 112vh;
+        width: 86%;
+    }
+    .menu{
+        width: 100%;
+        background-color: rgb(14, 99, 164);
+    }
+    .image{
+        width: 100%;
+        padding: 22px;
+    }
+    img{
+        height: 60px;
+        width: 60px;
+        border-radius: 10px;
+    }
+}
+
+.homeDet{
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+}
+p{
+    width: 100%;
+    padding: 10px;
+    color: white;
+}
+.home p{
+    color: black;
+}
+.home{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.fa-house-chimney{
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+.history p{
+    color: black;
+}
+.history{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.fa-clock{
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.favo p{
+    color: black;
+}
+.favo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;;
+}
+.fa-heart{
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 10px;;
+}
+.sh{
+   margin-top: 20px;
+   border-bottom: 1px solid gray;
+   padding-bottom: 20px;
+}
+.Share{
+    width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;;
+}
+.fa-square-share-nodes{
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 10px;;
+}
+.Share p{
+    color: black;
+}
+.rate{
+    width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;;
+}
+.fa-star{
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 10px;;
+}
+.rate p{
+    color: black;
+}
+
+.set{
+    width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;;
+}
+.fa-cog{
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 10px;;
+}
+.premium p{
+    color: black;
+}
+.dio{
+    width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;;
+}
+.fa-coins{
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 10px;;
+}
+.wh{
+    width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;;
+}
+.fa-question{
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 10px;;
+}
+.fee{
+    width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;;
+}
+.fa-briefcase{
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 10px;;
+}
+.pri{
+    width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;;
+}
+.fa-lock{
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 10px;;
+}
+.sub{
+    color: rgb(16, 140, 168);
 }
