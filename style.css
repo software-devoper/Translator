@@ -184,12 +184,12 @@ nav {
     }
     body {
         height: 112vh;
-        width: 102vw;
+        width: 100vw;
     }
 
     .container {
         height: 100%;
-        width: 110%;
+        width: 100%;
     }
 
     #text {
