@@ -15,7 +15,7 @@ li {
 .nav {
     height: 8%;
     width: 100%;
-    background-color: blue;
+    background-color: #0a73b8;
     display: flex;
     justify-content: left;
     align-items: center;
